@@ -1,4 +1,6 @@
 import random
+
+
 class bBoard:
     """A data type representing a battleship board
        with 10 rows and 10 columns.
@@ -9,13 +11,12 @@ class bBoard:
         self.height = height
         self.data = [[' ']*width for row in range(height)]
 
-        # We do not need to return anything from a constructor!
 
     def __repr__(self):
         """This method returns a string representation
            for an object of type Board.
         """
-        s = ''                          # the string to return
+        s = ''                          
         for row in range(0, self.height):
             if row == 9:
                 s += str(row +1) + '|'
@@ -35,7 +36,7 @@ class bBoard:
                 s += '  '
             s += ' ' + chr(i)
 
-        return s       # the board is complete, return it
+        return s
     
     def createShips(self):
         """createShips creates 3 ships, represented as O, that are randomly placed on the board.
